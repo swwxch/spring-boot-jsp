@@ -1,0 +1,308 @@
+html, body {
+	height:100%;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,/* structural elements 结构元素 */ dl, dt, dd, ul, ol, li,/* list elements 列表元素 */ pre,/* text formatting elements 文本格式元素 */ form, fieldset, legend, button, input, textarea,/* form elements 表单元素 */ th, td /* table elements 表格元素 */ {
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+	margin:10px 0;
+}
+h1 {
+	line-height:43px
+}
+h2 {
+	line-height:35px
+}
+h3 {
+	line-height:30px
+}
+h4 {
+	line-height:22px
+}
+** 重置文本格式元素 **/ a {
+ color:#000;
+ text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+	text-decoration:none;
+	color:#000;
+}
+input[type="radio"] {
+	border: none;
+}
+button {
+	cursor:pointer;
+}
+input {
+	font-size: 15px;
+	border-radius:4px;
+	-ms-border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border: 1px solid #d9d9d9;
+	font-family: "微软雅黑";
+}
+/* 使得表单元素在 ie 下能继承字体大*/
+i {
+	font-size:14px;
+	text-shadow:none;
+}
+ul {
+	list-style-type:none;
+}
+body {
+	background-image:url(../images/login_bg.png);
+	overflow: auto;
+	font-size: 14px;
+}
+/*logo*/
+.logo-f {
+	width:344px;
+	height:38px;
+	margin:auto;
+	padding-top:100px;
+}
+.logo {
+	background-image:url(../images/login.png);
+	width:38px;
+	height:38px;
+	float:left;
+	margin-right:10px;
+}
+.logo-font {
+	float:left;
+	width:330px;
+	height:32px;
+	line-height:32px;
+	font-size:30px;
+	font-weight:bold;
+	color:#004d7e;
+	letter-spacing:2px;
+	text-shadow:#64a6ca 2px 2px 0;
+}
+/*login-header*/
+.login-header {
+	background-image:url(../images/login-header.png);
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	height:110px;
+	width:700px;
+	margin:auto;
+}
+/*login-footer*/
+.login-footer {
+	clear:both;
+	height:66px;
+	line-height:66px;
+	width:700px;
+	margin:auto;
+	text-align:center;
+	background: url(../images/copyright.png) no-repeat center;
+}
+.users-login {
+	width:220px;
+	height:30px;
+	display:block;
+	background-image:url(../images/users-login.png);
+	float:left;
+	margin-top:68px;
+}
+.user-photo-f {
+	background-image:url(../images/user-photo-f.png);
+	display:inline-block;
+	width:84px;
+	height:93px;
+	margin-top:10px;
+	margin-left:8px;
+	float:left;
+}
+.user-photo {
+	height:78px;
+	width:78px;
+	border-radius:99px;
+	margin-left:3px;
+	margin-top:3px;
+}
+/*login-body*/
+.login-body {
+	height:285px;
+	width:700px;
+	margin:auto;
+	background-image:-webkit-gradient(linear, left top, left bottom, from( #b2dcf0 ), to( #b0cde6 ));
+	background-image:-webkit-linear-gradient( #b2dcf0, #b0cde6 );
+	background-image:-moz-linear-gradient( #b2dcf0, #b0cde6 );
+	background-image:-ms-linear-gradient( #b2dcf0, #b0cde6 );
+	background-image:-o-linear-gradient( #b2dcf0, #b0cde6 );
+	background-image:linear-gradient( #b2dcf0, #b0cde6 );
+ 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2dcf0', endColorstr='#b0cde6', GradientType=0 );
+ 	-moz-box-shadow: 0px 6px 10px #54789c;
+	-webkit-box-shadow: 0px 6px 10px #54789c;
+	box-shadow: 0px 6px 10px #54789c;
+}
+.login-body-left {
+	width:346px;
+	height:258px;
+	float:left;
+	padding-left:50px;
+	padding-top:28px;
+	background-image:url(../images/line.png);
+	background-position:100%;
+	background-repeat:no-repeat;
+}
+.login-body-right {
+	width:304px;
+	height:285px;
+	float:left;
+}
+/*用户名,密码,验证码提取*/
+.username, .userpass, .captcha {
+	height:35px;
+	background-color:#fff;
+	border-radius:5px;
+	margin-top:12px;
+}
+/*用户名,密码提取*/
+.username, .userpass {
+	width:297px;
+}
+/*用户名图片,密码图片提取*/
+.username-p, .userpass-p {
+	height:35px;
+	width:20px;
+	display:block;
+	float:left;
+	margin-left:10px;
+}
+/*用户名密码和验证码的input输入框*/
+.userlab, .captchalab {
+	border:0;
+	height:35px;
+	padding-left:15px;
+}
+/*用户名密码的input输入框*/
+input.userlab {
+	float:left;
+	width:251px;
+	_width:241px;
+	height: 35px;
+	line-height:35px;
+	_height: 20px;
+}
+/*用户名*/
+.username-p {
+	background-image:url(../images/username.png);
+	background-repeat:no-repeat;
+	background-position:center left;
+}
+/*密码*/
+.userpass-p {
+	background-image:url(../images/userpass.png);
+	background-repeat:no-repeat;
+	background-position:center left;
+}
+/*验证码*/ 
+.captcha {
+	width:192px;
+	display:inline-block;
+	float:left;
+}
+/*验证码的input输入框*/
+.captchalab {
+	width:177px;
+	border-radius:8px;
+	height:35px;
+	line-height:35px;
+}
+.captcha-p {
+	margin-top:16px;
+	margin-left:10px;
+	height:35px;
+	width:73px;
+	display:inline-block;
+}
+/*记住用户名密码*/
+.remember {
+	width:297px;
+	margin-top:15px;
+}
+.remember li {
+	float:left;
+}
+.remember-check {
+	height:17px;
+	width:17px;
+	margin:0;
+	float:left;
+}
+.remember-font {
+	font-size:12px;
+	color:#666;
+	width:80px;
+	margin-left:8px;
+	cursor: pointer;
+}
+/*登录按钮*/
+.log-btn {
+	background-image:url(../images/log-btn.png);
+	border:red 1px solid;
+	height:40px;
+	width:297px;
+	border:0;
+	margin-top:12px;
+	margin-left:-18px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+}
+/*宣传语*/
+.message {
+	margin-top:65px;
+	margin-left:60px;
+}
+.message-one {
+	font-size:20px;
+	font-weight:600;
+	color:#fff;
+	opacity:0.9;
+	text-shadow:0px 0px 6px #1b6ba3;
+}
+.message-one span:first-child {
+	font-family:Arial;
+}
+.message-two {
+	font-size:28px;
+	font-weight:bold;
+	color:#fff;
+	text-shadow:0px 0px 6px #1b6ba3;
+	letter-spacing:3px
+}
+.message-three {
+	font-size:16px;
+	color:#004d7e;
+	margin-top:20px;
+}
+/*download*/
+.login_down{width:700px; height:60px; margin-left:auto; margin-right:auto;clear: both;overflow: hidden;}
+.login_down_l{width:50px; height:55px; background:url(../images/loginb_l.png) no-repeat; float:left;}
+.login_down_r{width:50px; height:55px; background:url(../images/loginb_r.png) no-repeat; float:left;}
+.login_down_c{ width: 600px; height: 55px; background: #2281c3; float:left;}
+.login_down_c li{ float: left;}
+.login_down_c li.downbtn{ width: 180px; height: 55px; line-height: 55px;}
+.login_down_c li.downline{width: 15px; height: 55px;background:url(../images/logdown.png) no-repeat 0 -165px;}
+.login_down_c li a i{ width: 40px; height: 55px; display: block; float:left;background:url(../images/logdown.png) no-repeat; }
+.login_down_c li a i.shipinpc{ background-position: 0 0; margin-left: 10px;}
+.login_down_c li a i.shipinmobil{background-position: 0 -55px;margin-left: 10px;}
+.login_down_c li a i.minsmobil{background-position: 0 -110px;margin-left: 10px;}
+.login_down_c li a{text-decoration: none;}
+.login_down_c li a span{color: #fff; }
+.login_down_c li a span:hover{color: #073f6e;}
+/*二维码扫描*/
+.saomiaobox{ width: 110px; height: 400px; float: left; padding-top: 40px; margin-left: 30px;}
+.login{ width: 700px; float: left;}
+.login_box{width: 700px; clear: both; overflow: hidden; margin-left: auto; margin-right: auto;}
+.sbox1,.sbox2,.sbox3{ width: 100px; height: 125px; background: #e0ebf8; margin-top: 15px;border-radius:5px;}
+.sbox1 img,.sbox2 img,.sbox3 img{ margin: 13px 13px 0 13px;}

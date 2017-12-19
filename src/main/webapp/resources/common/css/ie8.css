@@ -1,0 +1,15 @@
+.onoffswitch-checkbox {
+	height: auto !important;
+	display: block !important;
+}
+.onoffswitch-label, .onoffswitch-inner, .onoffswitch-switch{
+	display: none !important;
+}
+/*修复IE9中表单单行问题*/
+	div.ie8correct { 
+	float:left; 
+	width:33.33333333%;
+}
+.information-form>div> select{
+	padding-bottom: 8px;
+}
