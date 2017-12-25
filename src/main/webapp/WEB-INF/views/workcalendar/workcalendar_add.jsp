@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <%@ include file="/WEB-INF/views/common/hotlinemeta.jsp"%>
-    <title>工作日历管理</title>
+    <title>工作日历管理3</title>
     <%@ include file="/WEB-INF/views/common/hotlinecss.jsp"%>
     <link type="text/css" rel="stylesheet" href="${ctx}/resources/workcalendar/css/widget/DatePicker/datepicker.css">
 
