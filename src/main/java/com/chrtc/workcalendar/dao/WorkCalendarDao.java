@@ -1,19 +1,16 @@
 package com.chrtc.workcalendar.dao;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.QueryHint;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.repository.QueryHints;
+import com.chrtc.workcalendar.entity.WorkCalendar;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.chrtc.workcalendar.entity.WorkCalendar;
-
+import javax.persistence.QueryHint;
+import java.util.Date;
+import java.util.List;
+@CacheConfig(cacheNames = "workcalendar")
 public interface WorkCalendarDao extends PagingAndSortingRepository<WorkCalendar, String>,JpaSpecificationExecutor<WorkCalendar>,JpaRepository<WorkCalendar, String> {
 
 	/**
@@ -23,7 +20,9 @@ public interface WorkCalendarDao extends PagingAndSortingRepository<WorkCalendar
 	 * @return
 	 */
 	//@Query("from WorkCalendar t where t.year =?1 and t.workType =?2")   
-   // @QueryHints({ @QueryHint(name = "org.hibernate.cacheable", value ="true") })   
+   // @QueryHints({ @QueryHint(name = "org.hibernate.cacheable", value ="true") })
+
+
 	public List<WorkCalendar> findByYearAndWorkType(String year, String workType);
 
 	/**
@@ -33,6 +32,7 @@ public interface WorkCalendarDao extends PagingAndSortingRepository<WorkCalendar
 	 * @param workType
      * @return
      */
+	@Cacheable
 	public List<WorkCalendar> findByYearAndMonthAndWorkType(String year, String month,String workType);
 
 	/**
@@ -47,8 +47,8 @@ public interface WorkCalendarDao extends PagingAndSortingRepository<WorkCalendar
 	 * 启动查询缓存，缓存整个表数据
 	 * @return
 	 */
-    @Query("from WorkCalendar")   
-    @QueryHints({ @QueryHint(name = "org.hibernate.cacheable", value ="true") })   
+    @Query("from WorkCalendar")
+	@Cacheable
 	public List<WorkCalendar> findByYearAndWorkTypeAll();
     
     /**
@@ -69,5 +69,6 @@ public interface WorkCalendarDao extends PagingAndSortingRepository<WorkCalendar
      */
     @Modifying
     @Query("delete from WorkCalendar a where a.year =?1 and a.workType =?2")
+	@CacheEvict(allEntries = true)
     public void deleteByYearAndWorkType(String year, String workType);
 }
